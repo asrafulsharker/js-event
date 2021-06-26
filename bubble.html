@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Bubble</title>
+</head>
+
+<body>
+    <div class="container">
+        <ol type='1' id="mylist">
+            <li class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Aut, eum assumenda!</li>
+            <li class="item">Obcaecati, reprehenderit temporibus!</li>
+            <li class="item">Dignissimos, esse praesentium?</li>
+            <li class="item">Ullam, nemo voluptate!</li>
+            <li class="item">Possimus, cupiditate recusandae?</li>
+        </ol>
+        <button id="btn">Add New List</button>
+    </div>
+    <script>
+        document.getElementById('btn').addEventListener('click', function () {
+            newItem = document.createElement('li');
+            newItem.innerHTML = "Brand New item";
+            document.getElementById("mylist").appendChild(newItem);
+            console.log("Click Button");
+
+        })
+
+
+        items = document.getElementById("mylist");
+        items.addEventListener("click", function (event) {
+            event.target.parentNode.removeChild(event.target);
+
+
+        })
+
+
+
+    </script>
+</body>
+
+</html>
